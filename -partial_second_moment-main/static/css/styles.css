@@ -1,0 +1,103 @@
+html{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+}
+.container{
+  height: 100%;
+  align-content: center;
+  }
+
+#container-fluid{
+  font-family: sans-serif;
+  width: 100%;
+  height:100vh;
+  text-transform: uppercase;
+  background-size: cover;
+  padding: 100px;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: 100vh;
+}
+.logo {
+  display:block;
+  margin:auto;
+  border: 1px solid black;
+  padding: 15px 15px 6px;
+
+}
+
+.register-form{
+  border-radius: 5mm;
+  width: 50%;
+  margin: 0 auto;
+  background: url(../img/login.jpg);
+  background-position: center;
+  padding: 30px 33px 67px;
+  border: 1px solid black;
+  background-size: cover;  
+  text-align: left; 
+}
+
+.menu {
+  background-position: center; 
+}
+.form-inline{
+  float: right;
+  padding: 0 50px 6px;
+}
+.btn-s{
+  margin-top: 25px;
+  padding: 0 50px 6px;
+  background-position: center;
+}
+
+.register{
+  text-transform: uppercase;
+  font-size: 25px;
+  color: rgb(0, 0, 0) !important;
+  background-position: center;
+  padding: 30px 33px 67px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.footer{
+  font-size: 15px;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  position: static;
+  width: 100%;
+  height:auto;
+  background: linear-gradient(#34c8e9,rgb(107, 240, 162),gray) !important;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#logo{
+  width:69px;
+  height:64px;
+} 
+.carousel-item img {
+  /* opacity: 0.8; */
+  height: 650px;
+}
+.localizacion {
+  width: 100%;
+  padding: 20px 0 15px 0;
+  text-align: center;
+
+}
+.navbar{
+  background: linear-gradient(#34c8e9,rgb(107, 240, 162),gray) !important;
+  border: 1px solid black;  
+}
+
+
+
+
+

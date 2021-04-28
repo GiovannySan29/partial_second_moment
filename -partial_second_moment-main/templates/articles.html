@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container" height="520">
+  <div class="text-center" style="padding:10px 0" >
+      <div class="register-form">
+        <h1 class="text-center">Articles</h1>
+  <ul class="list-group">
+    {% for article in articles %}
+      <li class="list-group-item"><a href="article/{{article.id}}">{{article.cuidad}}</a></li>
+    {% endfor %}
+  </ul>
+      </div>
+  </div>
+</div>
+{% endblock %}

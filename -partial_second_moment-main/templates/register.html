@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body %}
+<script src="{{url_for('static', filename='js/validar.js')}}"></script> 
+<div class="container" height="520">
+  <div class="text-center" style="padding:10px 0" >
+    <div class="register-form">
+      <h1 class="text-center">Register</h1>
+        {% from "includes/_formhelpers.html" import render_field %}
+        <form method="POST" action="{{url_for('register')}}"  onsubmit="return register();">
+          <div class="form-group">
+            {{render_field(form.fullname, class_="form-control")}}
+          </div>
+          <div class="form-group">
+            {{render_field(form.email, class_="form-control")}}
+          </div>
+          <div class="form-group">
+            {{render_field(form.username, class_="form-control")}}
+          </div>
+          <div class="form-group">
+            {{render_field(form.country, class_="form-control")}}
+          </div>
+          <div class="form-group">
+            {{render_field(form.city, class_="form-control")}}
+          </div>
+          <div class="form-group">
+            {{render_field(form.password, class_="form-control")}}
+          </div>
+          <div class="form-group">
+            {{render_field(form.confirm, class_="form-control")}}
+          </div>
+          <div class="form-group" for="Tipo">Tipo de persona: 
+            <br>
+            <div class="form-group">
+              <select class="form-select" aria-label="Default select example" id="typeUsers" name="typeUsers">
+                  <option value="">Selecciona tu Rol</option>
+                  <option value="anfitrion">Anfitrión</option>
+                  <option value="invitado">Invitado</option>
+              </select>
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <p><input  type="submit" class="btn btn-primary " value="Submit"></p>
+                </div>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+</div> 
+{% endblock %}
+  

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome to your <small> Dashboard {{session.username}}</small></h1>
+  <a class="btn btn-success" href="/add_article"> Add Article</a>
+  <hr>
+  <section>
+    <div class="container fluid mt-3 mb-3" >
+      <div class="row mt-3">
+        {% for article in articles %}
+        <div class="col-12 col-md-4">
+            <div class="card mt-2 border-light" style="width: 22rem; height:30rem"  style="width: 18rem;">
+              <img src="{{url_for('static', filename='img/apart1.jpg')}}" alt="...">
+              <div class="card-body bg-light">
+                <div class="card-text">
+                  <strong>Resena: </strong> {{article.resena}} <br>
+                  <strong>ubicación: </strong> {{article.ubicacion}} <br>
+                  <strong>Dirección: </strong> {{article.direccion}} <br>
+                  <strong>Numero de habitaciones: </strong> {{article.habitacion}} <br>
+                  <strong>Valor por noche: </strong> {{article.valor}} <br>
+                  <a href="{{article.ubicacion}}"><strong class="text" style="color:blue";>Ubicación google maps</strong></a>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                  <form action="{{url_for('delete_article', id=article.id)}}" method="post">
+                <a href="edit_article/{{article.id}}" class="btn btn-primary pull-right">Edit</a></td>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="DELETE" class="btn btn-danger btn-delete">
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

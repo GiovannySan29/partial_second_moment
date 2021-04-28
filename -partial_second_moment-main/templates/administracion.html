@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div id="container-fluid">
+    <div class="link-dark">
+        <div class="register-form">
+            <div class="header-content d-flex justify-content-center p-2">
+                <br>
+                <div class="text-center">GESTIÓN DE PRODUCTOS-ADMINISTRACIÓN</div>            
+            </div>
+            <img src="../static/img/logoH.png" alt="Giovanny"  class="logo" >
+                <class="dark">
+                    <div class="col text-center">
+                        <div class="btn-group-vertical" >
+                            <a class="btn btn-success" href="add_article" role="button">Agregar Producto Nuevo</a>
+                        <br>
+                            <a class="btn btn-warning" href="dashboard" role="button">Editar Productos</a>
+                        <br>
+                            <a class="btn btn-primary" href="articles" role="button">Listar productos</a>
+                                <br>
+                            <a class="btn btn-info" href="perfil" role="button">Perfil</a>
+                        </div>
+                    </div> 
+            </div>
+    </div>
+</div>
+{% endblock %}

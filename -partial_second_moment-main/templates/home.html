@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <section class="d-none d-md-block">
+    <div class="row">
+        <div class="col">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../static/img/slide2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../static/img/slide1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../static/img/slider3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section>
+    <div class="container fluid mt-3 mb-3" >
+      <div class="row mt-3">
+        {% for article in articles %}
+        <div class="col-12 col-md-4">
+            <div class="card mt-2 border-light" style="width: 22rem; height:30rem" id="card" style="width: 18rem;">
+              <img src="{{url_for('static', filename='img/apart1.jpg')}}" alt="...">
+              <div class="card-body bg-light">
+                <div class="card-text">
+                  <strong>Cuidad: </strong>{{article.cuidad}}<br>
+                  <strong>Dirección: </strong>{{article.direccion}}<br>
+                  <strong>Ubicación: </strong>{{article.ubicacion}}<br>
+                  <strong>Consta de </strong>{{article.habitacion}}<strong> habitaciones</strong><br>
+                  <strong>Valor por noche: </strong>{{article.valor}}<br>
+                  <strong>Reseña: </strong>{{article.resena}}<br>
+                  <a href="{{article.ubicacion}}"><strong class="text" style="color:rgb(0, 0, 242)";>Ubicación:</strong></a>
+                </div>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="localizacion">
+    <h1 class="titulo">
+        Encuentranos
+    </h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.370107503028!2d-75.57631170513562!3d6.2184820726449725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44282d8788c539%3A0xbee6b3b331c4dd33!2sCra.%2043b%20%2316-41%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1617751570375!5m2!1ses!2sco" width="1250" height="450" style="border:1px;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+{% endblock %}
